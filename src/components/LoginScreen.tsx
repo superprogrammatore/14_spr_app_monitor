@@ -10,7 +10,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Lock, Eye, EyeOff, KeyRound, Shield, AlertCircle, BookOpen } from 'lucide-react';
+import { Lock, Eye, EyeOff, KeyRound, Shield, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -150,22 +150,6 @@ export function LoginScreen({ onLogin, error, onClearError }: LoginScreenProps) 
               </Button>
             </form>
 
-            {/* Info didattica */}
-            <div className="mt-6 pt-6 border-t border-border">
-              <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                <BookOpen className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary" />
-                <div>
-                  <p className="font-medium text-foreground mb-1">
-                    🔐 Come funziona?
-                  </p>
-                  <p>
-                    Il codice che inserisci viene trasformato in un <strong>hash</strong> (una stringa di caratteri 
-                    casuale) e confrontato con l'hash memorizzato. In questo modo il codice originale non viene 
-                    mai salvato in chiaro!
-                  </p>
-                </div>
-              </div>
-            </div>
           </CardContent>
         </Card>
 
