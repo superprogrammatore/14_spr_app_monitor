@@ -10,10 +10,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Lock, Eye, EyeOff, KeyRound, Shield, AlertCircle } from 'lucide-react';
+import { Lock, Eye, EyeOff, KeyRound, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import superProgrammatoreLogo from '@/assets/super-programmatore-logo.png';
 
 interface LoginScreenProps {
   onLogin: (code: string) => Promise<boolean>;
@@ -62,9 +63,13 @@ export function LoginScreen({ onLogin, error, onClearError }: LoginScreenProps) 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-primary/50 mb-4 shadow-lg"
+            className="mb-4"
           >
-            <Shield className="w-10 h-10 text-primary-foreground" />
+            <img 
+              src={superProgrammatoreLogo} 
+              alt="Super Programmatore" 
+              className="w-48 h-auto mx-auto"
+            />
           </motion.div>
           
           <h1 className="text-3xl font-bold mb-2">
